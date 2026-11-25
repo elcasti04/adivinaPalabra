@@ -1,0 +1,418 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #8175ff;
+    --primary-hover: #6b5ce7;
+    --background: #101322;
+    --card: #1b2033;
+    --card-light: #252b42;
+    --text: #f3f4ff;
+    --muted: #a0a5bd;
+    --success: #35d39a;
+    --border: #343a55;
+}
+
+body {
+    min-height: 100vh;
+    height: 100vh;
+    padding: 18px;
+
+    font-family: 'Nunito', sans-serif;
+    color: var(--text);
+
+    background:
+        radial-gradient(circle at 10% 10%, #25204c 0, transparent 35%),
+        radial-gradient(circle at 90% 90%, #172e4d 0, transparent 35%),
+        var(--background);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+body > h1 {
+    font-size: clamp(25px, 4vh, 34px);
+    font-weight: 900;
+    letter-spacing: -1px;
+    text-align: center;
+    color: white;
+    margin-bottom: 4px;
+}
+
+body > p:nth-of-type(1) {
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+/* =========================
+   PUNTUACIÓN
+========================= */
+
+body > p:nth-of-type(2) {
+    width: 100%;
+    max-width: 490px;
+    padding: 11px 18px;
+
+    background: linear-gradient(110deg, #6658dc, #8a6fff);
+    border-radius: 13px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 14px;
+    font-weight: 800;
+    color: white;
+
+    box-shadow: 0 5px 18px rgba(112, 95, 255, 0.18);
+    margin-bottom: 17px;
+}
+
+#puntos {
+    font-size: 21px;
+    font-weight: 900;
+}
+
+/* =========================
+   PISTA
+========================= */
+
+h3 {
+    width: 100%;
+    max-width: 490px;
+    font-size: 16px;
+    font-weight: 900;
+    margin-bottom: 8px;
+    color: #c5bdff;
+}
+
+#pista {
+    width: 100%;
+    max-width: 490px;
+    min-height: 65px;
+    padding: 13px 17px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background: #252541;
+    border: 1px solid #45416e;
+    border-left: 4px solid var(--primary);
+    border-radius: 12px;
+
+    color: #e1deff;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    margin-bottom: 14px;
+}
+
+/* =========================
+   CANTIDAD DE LETRAS
+========================= */
+
+body > p:nth-of-type(3) {
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+#cant {
+    color: var(--primary);
+    font-weight: 900;
+}
+
+/* =========================
+   PALABRA
+========================= */
+
+#palabra {
+    width: 100%;
+    max-width: 490px;
+    min-height: 65px;
+    padding: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #171b2d;
+    border: 2px dashed #4d477d;
+    border-radius: 13px;
+
+    color: #a99eff;
+    font-size: clamp(21px, 4vh, 29px);
+    font-weight: 900;
+    letter-spacing: 7px;
+    text-align: center;
+
+    overflow-wrap: anywhere;
+    margin-bottom: 12px;
+}
+
+/* =========================
+   ANUNCIO
+========================= */
+
+#anuncio {
+    width: 100%;
+    max-width: 490px;
+    min-height: 23px;
+
+    color: var(--success);
+    font-size: 14px;
+    font-weight: 900;
+    text-align: center;
+
+    margin-bottom: 9px;
+}
+
+/* =========================
+   RESPUESTA
+========================= */
+
+#userPalabra {
+    width: 100%;
+    max-width: 490px;
+    min-height: 48px;
+
+    display: block;
+    padding: 10px 15px;
+
+    background: #171b2d;
+    color: white;
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    outline: none;
+    resize: none;
+
+    font-family: inherit;
+    font-size: 15px;
+    text-align: center;
+
+    transition: 0.25s;
+    margin-bottom: 10px;
+}
+
+#userPalabra::placeholder {
+    color: #747b96;
+}
+
+#userPalabra:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(129, 117, 255, 0.15);
+}
+
+/* =========================
+   BOTÓN COMPROBAR
+========================= */
+
+button {
+    width: 100%;
+    max-width: 490px;
+    min-height: 47px;
+
+    border: none;
+    border-radius: 12px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 900;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+#comprobar {
+    background: linear-gradient(110deg, #7062ed, #927aff);
+    color: white;
+
+    box-shadow: 0 5px 15px rgba(112, 98, 237, 0.2);
+}
+
+#comprobar:hover:not(:disabled) {
+    background: linear-gradient(110deg, #8174ff, #a08bff);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(112, 98, 237, 0.3);
+}
+
+#comprobar:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+/* =========================
+   BOTÓN SIGUIENTE
+========================= */
+
+#btn-continuar {
+    width: 100%;
+    max-width: 490px;
+    margin-top: 10px;
+}
+
+#btn-continuar button {
+    background: linear-gradient(110deg, #0f9f76, #22c993);
+    color: white;
+
+    border: 1px solid #37d9a4;
+
+    box-shadow: 0 5px 16px rgba(34, 201, 147, 0.17);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#btn-continuar button::after {
+    content: '→';
+    font-size: 20px;
+    transition: transform 0.25s ease;
+}
+
+#btn-continuar button:hover {
+    background: linear-gradient(110deg, #12b487, #35dfa9);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(34, 201, 147, 0.25);
+}
+
+#btn-continuar button:hover::after {
+    transform: translateX(5px);
+}
+
+#btn-continuar button:active {
+    transform: scale(0.98);
+}
+
+/* =========================
+   BOTONES DESHABILITADOS
+========================= */
+
+button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* =========================
+   PANTALLAS PEQUEÑAS
+========================= */
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    body > h1 {
+        font-size: 27px;
+    }
+
+    body > p:nth-of-type(1) {
+        font-size: 12px;
+    }
+
+    #pista {
+        font-size: 13px;
+    }
+
+    #palabra {
+        letter-spacing: 4px;
+        font-size: 23px;
+    }
+
+    #userPalabra {
+        font-size: 14px;
+    }
+}
+
+/* =========================
+   PANTALLAS DE POCA ALTURA
+========================= */
+
+@media (max-height: 650px) {
+    body {
+        padding: 8px 15px;
+    }
+
+    body > p:nth-of-type(1) {
+        margin-bottom: 7px;
+    }
+
+    body > p:nth-of-type(2) {
+        margin-bottom: 9px;
+        padding: 8px 15px;
+    }
+
+    h3 {
+        margin-bottom: 5px;
+    }
+
+    #pista {
+        min-height: 48px;
+        padding: 8px 12px;
+        margin-bottom: 8px;
+    }
+
+    body > p:nth-of-type(3) {
+        margin-bottom: 5px;
+    }
+
+    #palabra {
+        min-height: 50px;
+        margin-bottom: 7px;
+    }
+
+    #anuncio {
+        min-height: 18px;
+        margin-bottom: 5px;
+    }
+
+    #userPalabra {
+        min-height: 40px;
+        margin-bottom: 7px;
+    }
+
+    button {
+        min-height: 40px;
+    }
+
+    #btn-continuar {
+        margin-top: 6px;
+    }
+}
+
+/* En móviles muy pequeños permitimos desplazamiento */
+@media (max-height: 580px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+        overflow-y: auto;
+    }
+}
